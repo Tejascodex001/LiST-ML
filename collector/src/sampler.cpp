@@ -30,6 +30,5 @@ sample sample_usage(){
     total_delta = user_delta + nice_delta + system_delta + idle_delta + iowait_delta + irq_delta + softirq_delta;
     usage.cpu_usage = double(total_delta - idle_delta)/double(total_delta);
     usage.timeStamp = timer;
-    cout << usage.cpu_usage*100 << endl;
     return usage;
 }

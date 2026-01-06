@@ -19,7 +19,7 @@ Writer::Writer(const string &Filename):header_written_(false){
 }
 
 void Writer::write_sample(const sample &usage){
-    file_ << usage.timeStamp << "," << usage.cpu_usage << "\n";
+    file_ << usage.timeStamp << "," << usage.cpu_usage*100 << "\n";
 }
 
 void Writer::close(){
