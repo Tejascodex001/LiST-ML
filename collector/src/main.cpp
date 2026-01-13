@@ -40,6 +40,8 @@ int main (){
     Samplequeue samplequeue;
     thread t(writer_thread, ref(samplequeue));
 
+    //unoptimized, needs optimization -  optimized can be O(n).
+    
     while(!stop_request){
         sample data = sample_usage();
         window.push_back(data);
