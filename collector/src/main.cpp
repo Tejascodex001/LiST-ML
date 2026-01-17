@@ -27,12 +27,14 @@ void writer_thread(Samplequeue &q){
     writer.flush();
     writer.close();
 }
+
 /*  Sigint handled completely ( I didnt learn much as this concept is difficult and i am burned)
     --Date: 10 Jan 2026.
 */
+
 int main (){  
     vector <sample> window;
-    int max_size = 30;
+    int max_size = 30, m = 2, n = 3, l = 2;
     double cpu_mean = 0, mem_mean = 0, cpu_sum = 0, mem_sum = 0, cpu_var_sum = 0, mem_var_sum = 0;
     double cpu_std = 0, mem_std = 0, cpu_z, mem_z, t1 = 2.5, t2 = 4.0; //t1 - warning threshold ; t2 - anomaly threshold
 
